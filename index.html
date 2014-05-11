@@ -25,7 +25,14 @@
     <p><a href="http://addyosmani.github.io/backbone-fundamentals/">Backbone Fundamentals</a></p>
   </div>
 
-  <script type="text/template" id="item-template"></script>
+  <script type="text/template" id="item-template">
+    <div class="view">
+      <input class="toggle" type="checkbox" <%= completed ? 'checked' : '' %>>
+      <label>˘<%= title %></label>
+      <button class="destroy"></button>
+    </div>
+    <input class="edit" value= "<%= title %>">
+  </script>
   <script type="text/template" id="stats-template"></script>
   <script src="js/lib/jquery.min.js"></script>
   <script src="js/lib/underscore-min.js"></script>
