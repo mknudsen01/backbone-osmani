@@ -43,7 +43,7 @@ app.AppView = Backbone.View.extend({
 
       this.$('#filters li a')
         .removeClass('selected')
-        .filter('[href="#/' + (app.TodoFilter || '' ) + '"]"')
+        .filter('[href="#/' + (app.TodoFilter || '' ) + '"]')
         .addClass('selected');
     } else {
       this.$main.hide();
@@ -86,7 +86,7 @@ app.AppView = Backbone.View.extend({
 
     app.Todos.create( this.newAttributes() );
     this.$input.val('');
-  }
+  },
 
   clearCompleted: function() {
     _.invoke(app.Todos.completed(), 'destroy');
